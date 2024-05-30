@@ -1,0 +1,140 @@
+.formContainer {
+    background-color: #ffffff8a;
+    height: 100vh;
+    width: 100%;
+    margin-top: 70px;
+    padding-top: 90px;
+}
+
+.formOrder {
+    background-color: rgba(0, 0, 0, 0.618);
+    height: 650px;
+    width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+}
+
+.formOrder label.orderTitle {
+    color: rgb(161, 161, 161);
+}
+
+.orderTitle {
+    padding: 50px 3px;
+    font-size: 15px;
+    color: rgb(161, 161, 161);
+}
+
+.formOrder input[type="datetime-local"] {
+    color: rgb(161, 161, 161);
+}
+
+.date::-webkit-calendar-picker-indicator,
+.myDateTimeInput::-moz-calendar-picker-indicator,
+.myDateTimeInput::-ms-calendar-picker-indicator {
+    color: rgb(161, 161, 161);
+}
+
+.formOrder input[type="datetime-local"]::after {
+    color: rgb(255, 0, 0);
+    background-color: #fff;
+}
+
+.formOrder input {
+    all: unset;
+    width: 400px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    margin-top: 20px;
+}
+
+.formOrder select::placeholder {
+    color: rgb(161, 161, 161);
+}
+
+.formOrder input {
+    color: rgb(161, 161, 161);
+}
+
+.formOrder input::placeholder {
+    padding-left: 20px;
+    color: rgb(161, 161, 161);
+}
+
+.btnFormOrder {
+    background-color: rgba(0, 0, 0, 0.554);
+    margin-top: 50px;
+    border: none;
+    padding: 5px 140px;
+    font-size: 24px;
+}
+
+.category {
+    width: 400px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.category label {
+    margin-left: 20px;
+    color: #ffffff4b;
+}
+
+.category select {
+    border-radius: 90px;
+    border: none;
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.category option {
+    color: #fff;
+}
+
+select {
+    padding: 0 50px; /* отступы по 20px слева и справа */
+    width: 150px; /* ширина элемента <select> */
+}
+
+.category select:focus {
+    outline: none;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.formOrder a {
+    width: 397px;
+    height: 42px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.form__text {
+    margin-top: 50px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.form__text a {
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #fff;
+}

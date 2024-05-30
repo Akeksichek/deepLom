@@ -1,0 +1,117 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 1280px;
+}
+
+/*-------------------------Модальное окно авторизации-------------------------------------*/
+.modalLog {
+    position: absolute;
+    left: 55%;
+    background-color: #fff;
+    height: 250px;
+    width: 400px;
+    border-radius: 50px;
+    top: 65px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 900;
+}
+
+.modalLog .titleLog {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modalLog input {
+    background-color: #f4f4f4;
+    border: none;
+    width: 300px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modalLog input:focus {
+    outline: none;
+}
+
+.formmodalLog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnLog {
+    background-color: #f4f4f4;
+    border: none;
+    margin-top: 20px;
+}
+
+.modalLog button {
+    cursor: pointer;
+}
+
+.modalLog.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*-------------------------Модальное окно авторизации-------------------------------------*/
+/*-------------------------Модальное окно регистрации-------------------------------------*/
+
+.modalReg {
+    position: absolute;
+    top: 65px;
+    left: 65%;
+    background-color: #fff;
+    height: 350px;
+    width: 400px;
+    border-radius: 50px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 900;
+}
+
+.modalReg .titleLog {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modalReg input {
+    background-color: #f4f4f4;
+    border: none;
+    width: 300px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modalReg input:focus {
+    outline: none;
+}
+
+.formmodalReg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnLog {
+    background-color: #f4f4f4;
+    border: none;
+    margin-top: 20px;
+}
+
+.modalReg button {
+    cursor: pointer;
+}
+
+.modalReg.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*-------------------------Модальное окно регистрации-------------------------------------*/

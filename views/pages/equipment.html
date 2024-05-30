@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/modal.css" />
+  <title>StudioDesign</title>
+</head>
+<body>
+
+    <header id="auth0" class="header">
+        <div class="container">
+            <nav class="nav" style="align-items: center;">
+                <div class="textNav">
+                    <a class="textNavA" href="/create_order">Записаться</a>
+                </div>
+                <div class="textNav">
+                    <a class="textNavA" href="/equipment">О нас</a>
+                </div>
+                <div class="logoNav">
+                    <a href="/"><img src="../uploads/logo.png" alt="" /></a>
+                </div>
+                <div class="textNav" id="noauth_user_auth">
+                        <a class="textNavA btnNav" id="logOpen">Вход</a>
+                </div>
+                    <div class="textNav" id="noauth_user_reg">
+                        <a class="textNavA btnNav" id="regOpen">Регистрация</a>
+                    </div>
+                    <div class="textNav auth_user" id="auth_user">
+                        <a class="textNavA btnNav" href="/logout" id="regOpen">Выход</a>
+                    </div>
+                    </div>
+                    
+            </nav>
+        </div>
+    </header>
+
+  <div class="container">
+    <div class="text_qe">
+      <div class="text_eq" >
+      Жить на 100%! Создавать прекрасное. Вдохновлять. Все это и многое другое мы — фотостудия foto4ka(фоточка). В нашем портфолио большой опыт работы с крупнейшими компаниями и печатными СМИ, а также сотрудничество с известными мировыми брендами. Мы проводим рекламные и персональные съемки, смело беремся за сложные задачи и создаем невероятные проекты. Вы привыкли работать только с профессионалами, выбирать лучшее и не боитесь смелых импровизаций? Тогда мы нашли друг друга. Мы не ищем примитивных путей. Мы привыкли впечатлять наших клиентов. Мы уверены, что сможем впечатлить и Вас!
+    
+    <div class="company">
+      <img src="../uploads/comp1.png" alt="">
+      <img src="../uploads/comp2.png" alt="">
+      <img src="../uploads/comp3.png" alt="">
+      <img src="../uploads/comp4.png" alt="">
+      <img src="../uploads/comp5.png" alt="">
+    </div>
+    </div>
+    </div>
+    
+    
+  </div>
+
+
+
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/user_data.js"></script>
+
+
+</body>
+
+<div class="modalLog" id="modalLog">
+    <form action="/test_auth" class="formmodalLog" method="POST">
+        <h1 class="titleLog">Вход</h1>
+        <input type="text" name="login" placeholder="Введите логин" />
+        <input type="text" name="password" placeholder="Введите пароль" />
+        <button type="submit" class="btnLog">Подтвердить</button>
+        <button type="button" class="btnLog" id="logClose">
+            Отмена
+        </button>
+    </form>
+</div>
+<div class="modalReg" id="modalReg">
+    <form action="/signup" class="formmodalReg" method="POST">
+        <h1 class="titleLog">Регистрация</h1>
+        <input type="text" name="login" placeholder="Введите логин" />
+        <input type="email" name="email" placeholder="Введите email" />
+        <input type="text" name="password" placeholder="Введите пароль" />
+        <input type="text" name="password_confirm" placeholder="Повторите пароль" />
+        <button type="submit" class="btnLog">Подтвердить</button>
+        <button href="" type="button" class="btnLog" id="regClose">Отмена</button>
+    </form>
+</div>
+
+</html>
