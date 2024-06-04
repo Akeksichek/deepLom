@@ -1,6 +1,7 @@
 #include "RegisterCtrl.h"
 #include "../models/Users.h"
 #include <fstream>
+#include "assets/filework/filework.h"
 
 void RegisterCtrl::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<void (const HttpResponsePtr &)> &&callback)
 {
@@ -11,6 +12,37 @@ void RegisterCtrl::asyncHandleHttpRequest(const HttpRequestPtr& req, std::functi
         "user"
     };
     Password hashPass;
+
+
+    auto signup_conf = drogon::app().getDbClient();
+    auto con = signup_conf->execSqlAsyncFuture("select * from users where email=?", userData[1]);
+    auto unique = con.get();
+    
+    if( unique.size() > 0 )
+    {
+        std::string html_path = "../views/pages/deci_making.html";
+                std::ifstream html_file;
+                auto resp = HttpResponse::newHttpResponse(k200OK, CT_TEXT_HTML);
+                html_file.open(html_path, std::ios::binary);
+                if(!html_file.is_open())
+                {
+                    resp->setStatusCode(k404NotFound);
+                    resp->setBody("Что-то пошло не так");
+                    return;
+                }
+                html_file.seekg(0, std::ios::end);
+                size_t fileSize = html_file.tellg();
+                html_file.seekg(0, std::ios::beg);
+                auto buffer = std::make_unique<char[]>(fileSize);
+                html_file.read(buffer.get(), fileSize);
+                html_file.close();
+                resp->setBody(buffer.get());
+        callback(resp);
+        return;
+    }
+    std::string setTmp = userData[0] + "\n" + userData[1] + "\n" + userData[3];
+    Filework tmp;
+    tmp.setTmpData(setTmp);
 
     std::string hash = hashPass.__hashPassword(userData[2]);
     auto clientPtr = drogon::app().getDbClient();
@@ -52,5 +84,4 @@ void RegisterCtrl::asyncHandleHttpRequest(const HttpRequestPtr& req, std::functi
 
     if(req->getPath() == "/signup")
         callback(resp);
-    
 }

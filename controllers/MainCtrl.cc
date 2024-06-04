@@ -27,7 +27,6 @@ void MainCtrl::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<v
         html_file.close();
         resp->setBody(buffer.get());
         user_data user_dataOBJ;
-        std::cout << "\n| user data |" << user_dataOBJ.get_userData() << "\n| user data |\n\n";
         callback(resp);
     }
     else if( req->getPath() == "/create_order" )

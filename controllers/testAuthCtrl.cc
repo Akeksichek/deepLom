@@ -1,7 +1,7 @@
 #include "testAuthCtrl.h"
+#include <fstream>
 #include "assets/hashing/hashingPass.h"
 #include "assets/filework/filework.h"
-#include <fstream>
 #include "assets/user_data/user_data_tmp.cpp"
 
 void testAuthCtrl::asyncHandleHttpRequest(const HttpRequestPtr& req, std::function<void (const HttpResponsePtr &)> &&callback)

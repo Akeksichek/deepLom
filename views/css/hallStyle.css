@@ -22,6 +22,11 @@
 }
 
 .orderTitle {
+    padding: 20px 3px;
+    font-size: 28px;
+    color: rgb(161, 161, 161);
+}
+.categoryTitle{
     padding: 50px 3px;
     font-size: 15px;
     color: rgb(161, 161, 161);
@@ -31,10 +36,10 @@
     color: rgb(161, 161, 161);
 }
 
-.date::-webkit-calendar-picker-indicator,
-.myDateTimeInput::-moz-calendar-picker-indicator,
-.myDateTimeInput::-ms-calendar-picker-indicator {
-    color: rgb(161, 161, 161);
+input::-webkit-calendar-picker-indicator,
+input::-moz-calendar-picker-indicator,
+input::-ms-calendar-picker-indicator {
+    color: rgb(255, 0, 0);
 }
 
 .formOrder input[type="datetime-local"]::after {
@@ -70,6 +75,7 @@
     border: none;
     padding: 5px 140px;
     font-size: 24px;
+    color: #fff;
 }
 
 .category {
@@ -84,7 +90,7 @@
 
 .category label {
     margin-left: 20px;
-    color: #ffffff4b;
+    color: rgb(162 161 161);
 }
 
 .category select {

@@ -20,13 +20,18 @@
                     <a class="textNavA" href="/create_order">Записаться</a>
                 </div>
                 <div class="textNav">
-                    <a class="textNavA" href="/equipment">О нас</a>
+                    <a class="textNavA" href="/">Главная</a>
                 </div>
                 <div class="logoNav">
                     <a href="/"><img src="../uploads/logo.png" alt="" /></a>
                 </div>
                 <div class="textNav" id="noauth_user_auth">
+                    <div>
                         <a class="textNavA btnNav" id="logOpen">Вход</a>
+                    </div>
+                </div>
+                <div id="history_list" class="textNav">
+                        <a class="textNavA btnNav hl_animation">USER</a>
                 </div>
                     <div class="textNav" id="noauth_user_reg">
                         <a class="textNavA btnNav" id="regOpen">Регистрация</a>
@@ -39,6 +44,16 @@
             </nav>
         </div>
     </header>
+    <div class="container">
+        <div class="history" id="history_modal">
+            <div class="h_preview">
+                <h4>История</h4>
+                <img id="h_close" src="../uploads/close_btn.png" alt="close_btn">
+            </div>
+            <div id="h_table" class="h_table">
+            </div>
+        </div>
+    </div>
 
   <div class="container">
     <div class="text_qe">
@@ -69,7 +84,7 @@
 <div class="modalLog" id="modalLog">
     <form action="/test_auth" class="formmodalLog" method="POST">
         <h1 class="titleLog">Вход</h1>
-        <input type="text" name="login" placeholder="Введите логин" />
+        <input type="email" name="email" placeholder="Введите email" />
         <input type="text" name="password" placeholder="Введите пароль" />
         <button type="submit" class="btnLog">Подтвердить</button>
         <button type="button" class="btnLog" id="logClose">

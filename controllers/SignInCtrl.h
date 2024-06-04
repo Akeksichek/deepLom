@@ -2,6 +2,8 @@
 
 #include <drogon/HttpSimpleController.h>
 #include "assets/hashing/hashingPass.h"
+#include <fstream>
+#include "assets/filework/filework.h"
 
 using namespace drogon;
 

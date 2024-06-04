@@ -13,4 +13,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("regClose").addEventListener("click", function () {
         this.closest(".modalReg").classList.remove("open");
     });
+
+
+
+    document.getElementById("history_list").addEventListener("click", function() {
+        document.querySelector(".history").classList.add("active");
+        document.getElementById("history_list").style.animationName = "NULL";
+    });
+    document.getElementById("h_close").addEventListener("click", function() {
+        this.closest(".history").classList.remove("active");
+    });
+
 });
